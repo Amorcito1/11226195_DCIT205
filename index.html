@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Science Department</title>
+    <style>
+        body {
+            background: rgba(0, 0, 0, 0.7) url('under_grad_main.jpg') center center fixed;
+            background-size: cover;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+        }
+/* Add this style to your existing CSS */
+.overlay-container {
+    position: absolute;
+    top: 50%; /* Adjust the vertical position as needed */
+    left: 50%; /* Adjust the horizontal position as needed */
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 80%; /* Adjust the width as needed */
+    max-width: 600px; /* Set a maximum width for responsiveness */
+}
+
+
+.overlay-container h1 {
+    margin: 0;
+}
+
+body::after {
+    content: "";
+    background: rgba(0, 0, 0, 0.4); /* Adjust the alpha channel as needed */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+        header {
+            background-color: #333;
+            padding: 15px 0;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+            border-radius: 10px; /* Rounded corners for a modern look */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        li {
+            float: left;
+            margin-right: 20px;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            transition: background-color 0.3s ease-in-out;
+            border-bottom: 2px solid transparent; /* Initially transparent border */
+        }
+
+        li a:hover {
+            background-color: #555;
+            border-bottom: 2px solid #fff; /* White border on hover */
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        #home {
+    position: relative;
+}
+#cs-video {
+    width: 80%;
+    max-height: 400px; /* Set a max height for the video */
+    object-fit: cover;
+    display: block;
+    margin: 0 auto; /* Center the video horizontally */
+    border: 5px solid black; /* Add a white border with a width of 5px */
+}
+.overlay-container {
+            position: absolute;
+            top: 10;
+            left: 50;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            pointer-events: none; /* Allows clicks to pass through to the video */
+        }
+
+        /* Individual clickable boxes */
+        .clickable-box {
+            margin: 20px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            text-align: center;
+            pointer-events: auto; /* Enable click events for the box */
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .clickable-box:hover {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+        #programmes {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .programme-box {
+        width: 22%; /* Adjust the width as needed */
+        background-color:white;
+        border-radius:30px;
+        padding: 15px;
+        margin: 15px 0;
+        text-align: center;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .programme-box:hover {
+        background-color: white;
+    }
+
+    .programme-box h4 {
+        margin-bottom: 10px;
+        font-size: 18px;
+    }
+
+    .programme-box p {
+        line-height: 1.4;
+        margin-bottom: 15px;
+    }
+
+    .programme-box a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .programme-box a:hover {
+        color: #004080;
+    }
+
+    .programme-box:hover {
+    background-color: #FFD700; /* Yellow or goldish color */
+    transition: background-color 0.3s ease-in-out;
+}
+
+.programme-box:hover h4,
+.programme-box:hover p,
+.programme-box:hover a {
+    color: #333; /* Text color on hover */
+}
+        marquee {
+            margin-top: 20px;
+            width: 100%;
+        }
+        
+        marquee video {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+        }
+
+        .event-paragraph {
+    float: none; /* Remove the float for the event paragraph */
+    width: 100%; /* Take up the full width */
+    text-align: center; /* Center the text */
+}
+
+        .image-with-text {
+            position: relative;
+            text-align: center;
+            color: #fff;
+            transition: transform 0.3s ease-in-out;
+            margin-top: 20px;
+        }
+
+        .image-with-text:hover {
+            transform: scale(1.1);
+        }
+
+        .text-overlay {
+    margin-top: 10px; /* Adjust margin for the text overlay */
+}
+
+
+        .image-link {
+            display: inline-block;
+            margin: 10px;
+            border: 2px solid #0066cc;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(173, 216, 230, 0.8);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .image-link img {
+            width: 100%;
+            height: auto;
+        }
+
+        .image-link:hover {
+            transform: scale(1.1);
+        }
+
+       
+
+        p.event-paragraph {
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        a {
+            color: #0066cc;
+            text-decoration: none;
+            transition: color 0.3s ease-in-out;
+        }
+
+        a:hover {
+            color: #004080;
+        }
+    </style>
+</head>
+
+<body>
+      <center> <img src="cs-logo.png" alt="Short Courses Image"></center>                    
+    <header>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About us</a></li>
+            <li><a href="catalog.html">Catalog</a></li>
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="https://dcs.ug.edu.gh/events">Events</a></li>
+            <li><a href="contacts.html">Contact</a></li>
+            <li><a href="students projects.html">Student Projects</a></li>
+            <li><a href="staff profiles.html">Staff Profiles</a></li>
+            <li><a href="research-groups.html">Research Groups</a></li>
+            <li><a href="faculty.html">Faculty</a></li>
+        </ul>
+    </header>
+
+    <section id="home">
+        <video id="cs-video" src="cs video.mp4" aria-setsize="4" autoplay muted loop></video>
+        <div class="overlay-container">
+            <h1 style="color: white; font-weight: bold; font-size: 2em;">
+           <strong> YOUR GATEWAY TO WORLD CLASS COMPUTER SCIENCE EDUCATION</strong>    
+            </h1>
+        </div>
+    </section>
+        <section id="programmes">
+            <div class="programme-box" onclick="location.href='register.html';">
+                <h4>Short Courses</h4>
+                <p>Our eight-week intensive certificate course is open to senior high school graduates, tertiary students, school graduates, workers, and the general public.</p>
+                <a href="register.html">Read More</a>
+            </div>
+            
+            <div class="programme-box" onclick="location.href='https://dcs.ug.edu.gh/undergraduate';">
+                <h4>Undergraduate Programmes</h4>
+                <p>Open the door to sought-after technology careers with a world-class Bachelor of Science in Computer Science degree.</p>
+                <a href="https://dcs.ug.edu.gh/undergraduate">Read More</a>
+            </div>
+            
+            <div class="programme-box" onclick="location.href='https://dcs.ug.edu.gh/masters';">
+                <h4>MPhil and Msc Programmes</h4>
+                <p>Embrace world-class graduate education with a unique blend of cutting-edge research and industry experience.</p>
+                <a href="https://dcs.ug.edu.gh/masters">Read More</a>
+            </div>
+            
+            <div class="programme-box" onclick="location.href='https://dcs.ug.edu.gh/doctrate';">
+                <h4>PhD Programmes</h4>
+                <p>Our PhDs lead the effort to extend the boundaries of knowledge through quality and industry-relevant research.</p>
+                <a href="https://dcs.ug.edu.gh/doctrate">Read More</a>
+            </div>
+        </section>
+        
+        <div class="event-paragraph">
+            <p style="color: white;">
+                <span style="font-size: 35px;">Departmental Events Programmes</span><br>
+                Programmes, seminars, and events organized by the department.<br>
+                
+                <a href="https://dcs.ug.edu.gh/events"><b>View upcoming and ongoing events</b></a>
+            </p>
+            
+        </div>
+    
+        <div id="imageWithText" class="image-with-text">
+            <a href="index.html">
+                <img id="imageToChange" src="download.jpg" alt="Short Courses Image">
+            </a>
+        </div>
+    </section>
+    
+   
+    <p style="color:white"; >
+        Elevate your skills and stay ahead in the tech game! Explore our enticing short courses by clicking on the
+        captivating images below. Unleash your potential in Ethical Hacking, master the art of Web Development, dive
+        into Mobile App Development, and unravel the fundamentals of Computer Networks. Your journey to technological
+        excellence begins here!
+        <a href="register.html" style="color:red; font-style: italic;">Ready to transform? Click here to register now.</a>
+    </p>
+    <center><strong><h1 style="color: white;">We offer short courses</h1></strong></center>
+
+    <div>
+        <a href="register.html" class="image-link">
+            <img src="ethical hacking .jpg" alt="Ethical Hacking">
+        </a>
+        <a href="register.html" class="image-link">
+            <img src="web dev.jpg" alt="Introduction to Web Development">
+        </a>
+        <a href="register.html" class="image-link">
+            <img src="mAP.jpg" alt="Mobile App Development">
+        </a>
+        <a href="register.html" class="image-link">
+            <img src="cpu network.jpg" alt="Computer Network Fundamentals">
+        </a>
+    </div>
+    <div style="text-align: center; margin-top: 20px;">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdR3QRd-knezcQE0W8X-V2c_J_MeuZbfMxkNTLy6jwkqUKFPA/viewform">
+            <button style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #FFD700; color: #333;">Register</button>
+        </a>
+    </div>
+    
+
+    <footer style="color:black">
+        <p><h1>&copy; 2023 Computer Science Department</h1></p>
+        <img id="cs-logo" src="ug_logo.png">
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
